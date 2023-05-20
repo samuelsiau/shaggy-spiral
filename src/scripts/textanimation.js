@@ -25,7 +25,7 @@ tl.from(textLines, {
   duration: 0.7,
   rotateX: -27,
   y: 20,
-  opacity: 0,
+  autoAlpha: 0,
   ease: "back.out(1.4)",
   stagger: 0.17,
 });
