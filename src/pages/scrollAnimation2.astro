@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="scroll animation">
+  <div class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <div class="heroPadding">
+            <h1 class="reveal reveal-hero">Hi I'm Samuel, a product designer passionate about designing and building delightful websites, products, and design systems that help people make a difference.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="casestudylists">
+    <div class="container cslisting">
+      <div class="row">
+        <div class="column column-40">
+          <p class="reveal-list">ArchiPro</p>
+          <h2 class="reveal-list">Building Automated Shipping for Product Suppliers and Shipping Companies</h2>
+        </div>
+        <div class="column">
+          <img class="reveal-list" src="https://placehold.co/800x400" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container cslisting">
+      <div class="row">
+        <div class="column column-40">
+          <p class="reveal-list">Attitude Live</p>
+          <h2 class="reveal-list">Redesigning the AttitudeLive Website for Accessibility</h2>
+        </div>
+        <div class="column">
+          <img class="reveal-list" src="https://placehold.co/800x400" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container cslisting">
+      <div class="row">
+        <div class="column column-40">
+          <p class="reveal-list">JVNZ</p>
+          <h2 class="reveal-list">Designing an E-commerce Responsive Website for Personalised Children's Books</h2>
+        </div>
+        <div class="column">
+          <img class="reveal-list" src="https://placehold.co/800x400" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../scripts/scrollingtrigger.js"></script>
+</Layout>
+
+<style lang="scss">
+  .hero {
+    padding: 140px 0;
+    background: cyan;
+  }
+  .heroPadding {
+    
+  }
+
+  .cslisting {
+    padding: 120px 0;
+  }
+</style>
