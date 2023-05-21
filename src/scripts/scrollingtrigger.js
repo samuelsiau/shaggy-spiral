@@ -3,45 +3,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-let targets = gsap.utils.toArray(".reveal-list");
-
-function hide(elem) {
-  gsap.set(elem, {
-    autoAlpha: 0
-  });
-}
-
-function show(elem){
-  gsap.fromTo(elem, {
+gsap.utils.toArray(".gsReveal").forEach(function(elem){
+  const $section = $(elem);
+  const animationChange = gsap.fromTo($section, {
     autoAlpha: 0,
-    y: 100
+    y: 20
   }, {
     autoAlpha: 1,
     y: 0,
-    delay: 0.7,
-    duration: 1.7,
-    ease: "expo", 
-    overwrite: "auto"
-  })
-}
+    duration: 1,
+    stagger: 0.7
+  });
 
-gsap.utils.toArray(".reveal-list").forEach(function(elem){
-  hide(elem);
   ScrollTrigger.create({
     trigger: elem,
+    animation: animationChange,
     markers: true,
-    onEnter: function(){show(elem)},
-    onEnterBack: function(){show(elem)},
-    onLeave: function(){hide(elem)}
+    // toggleActions: "restart pause reverse pause",
+    start: "center 80%",
+    end: "center 20%",
   })
 })
-
-// gsap.from(".cslisting", {
-//   opacity: 0,
-//   stagger: 0.5,
-//   duration: 2,
-//   scrollTrigger: {
-//     trigger: ".cslisting",
-//     markers: true
-//   }
-// })
