@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import '../styles/textAnimation.scss';
 ---
 
 <Layout title="Text Animation">
@@ -13,7 +13,7 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="row">
       <div class="column">
-        <img class="imgHero" src="https://plchldr.co/i/1200x500?&bg=123asd&fc=fff">
+        <h1 id="textHero2" class="">Hi I'm Samuel, a product designer passionate about designing and building delightful websites, products, and design systems that help people make a difference.</h1>
       </div>
     </div>
 
@@ -25,10 +25,8 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
   <script src="../scripts/textanimation.js"></script>
+  <style lang="scss">
+    
+  </style>
 </Layout>
 
-<style lang="scss">
-  #textHero .line {
-    will-change: transform, opacity;
-  }
-</style>

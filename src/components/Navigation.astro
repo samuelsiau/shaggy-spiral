@@ -1,0 +1,28 @@
+---
+
+---
+
+<nav class="navbar">
+  <div><a href="/">Home</a></div>
+  <div></div>
+</nav>
+
+<script src="../scripts/navigation.js"></script>
+
+<style lang="scss">
+  .navbar{
+    height: 80px;
+    background: transparent;
+    transition: background 0.3s ease;
+    will-change: transform, background;
+  }
+
+  .navbar--scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    z-index: 999;
+  }
+</style>

@@ -7,15 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 // "play", "pause", "resume", "reset", "restart", "complete", "reverse", and "none".
 
 gsap.utils.toArray(".gsReveal").forEach(function(elem){
-  const $section = $(elem).find('.gsAni');
+  const items = elem.querySelectorAll(".gsAni");
 
-  gsap.set($section, {
+  gsap.set(items, {
     transformOrigin: "50% 100% 0",
     transformPerspective: 400,
     transformStyle: "preserve-3d"
   })
 
-  const animationChange = gsap.fromTo($section, {
+  const animationChange = gsap.fromTo(items, {
     rotateX: -27,
     y: 20,
     autoAlpha: 0,

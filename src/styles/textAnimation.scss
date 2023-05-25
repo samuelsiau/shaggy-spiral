@@ -1,0 +1,17 @@
+#textHero .line {
+  visibility: hidden;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+#textHero2 {
+  .line-overflow {
+    
+    overflow: hidden;
+  }
+
+  .line {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
