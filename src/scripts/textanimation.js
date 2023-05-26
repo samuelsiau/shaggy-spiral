@@ -36,20 +36,22 @@ gsap.set(textLines, {
   transformOrigin: "50% 100% 0",
   transformPerspective: 400,
   transformStyle: "preserve-3d",
+})
+
+tl.fromTo(textLines, {
   rotateX: -27,
   y: 20,
   autoAlpha: 0,
   opacity: 0
-})
-
-tl.to(textLines, {
+}, {
   duration: 0.7,
   rotateX: 0,
   y: 0,
   autoAlpha: 1,
+  opacity: 1,
   ease: "back.out(1.4)",
   stagger: 0.17,
-  delay: 2
+  delay: 1
 });
 
 gsap.set(textLines2, {
@@ -57,12 +59,14 @@ gsap.set(textLines2, {
   autoAlpha: 0,
 })
 
-tl2.to(textLines2, {
+tl2.fromTo(textLines2, {
+  autoAlpha: 0,
+}, {
   y: 0,
   autoAlpha: 1,
   ease: "back.out(1.4)",
   stagger: 0.17,
-  delay: 2
+  delay: 1
 })
 
 document.getElementById("animateagain").onclick = function(){

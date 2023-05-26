@@ -49,10 +49,74 @@ import Layout from '../layouts/Layout.astro'
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <div class="imagePallaxContainer">
+          <img class="imgPallax" src="https://placehold.co/800x600" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">    
+    <div class="row">
+      <div class="column">
+        <div class="imagePallaxContainer">
+          <img class="imgPallax" src="https://placehold.co/800x600" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <div class="fancy-grid-wrapper">
+          <div class="grid-fancy">
+            <div class="col1">
+              <img class="img1 parallax" data-horizontal="20" src="https://placehold.co/800x900" alt="">
+            </div>
+            <div class="col2">
+              <img class="img2 parallax" data-horizontal="60" src="https://placehold.co/800x600" alt="">
+            </div>
+            <div class="col3">
+              <img class="img3 parallax" data-horizontal="-20" src="https://placehold.co/800x600" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</h1>
+      </div>
+    </div>
+  </div>
+  <button class="button" type="button" id="backtotop">Back to top</button>
   <script src="../scripts/scrollingtrigger3.js"></script>
 </Layout>
 
 <style lang="scss">
+  body {
+    overflow-x: hidden;
+  }
   .hero {
     padding: 140px 0;
     background: cyan;
@@ -66,7 +130,49 @@ import Layout from '../layouts/Layout.astro'
   }
 
   .gsAni {
-    will-change: transform, opacity;
+    will-change: transform, opacity, visibility;
     visibility: hidden;
   }
+
+  .imagePallaxContainer {
+    text-align: center;
+    height: 500px;
+    background: lightseagreen;
+    overflow: hidden;
+    img {
+      padding-top: 40px;
+    }
+  }
+
+  .fancy-grid-wrapper {
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .grid-fancy {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: max-content max-content; 
+    gap: 0px 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "col1 col2 col3"
+      "col1 col2 col3";
+    
+
+    .col1 { 
+      grid-area: col1;
+    }
+
+    .col2 { 
+      grid-area: col2;
+      img {
+        padding-top: 20%;
+      }
+    }
+
+    .col3 { 
+      grid-area: col3; 
+    }
+  }
+
 </style>
