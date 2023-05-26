@@ -88,13 +88,13 @@ import Layout from '../layouts/Layout.astro'
         <div class="fancy-grid-wrapper">
           <div class="grid-fancy">
             <div class="col1">
-              <img class="img1 parallax" data-horizontal="20" src="https://placehold.co/800x900" alt="">
+              <img class="img1 parallax" data-horizontal="10" src="https://placehold.co/600x800/orange/white" alt="">
             </div>
             <div class="col2">
-              <img class="img2 parallax" data-horizontal="60" src="https://placehold.co/800x600" alt="">
+              <img class="img2 parallax" data-horizontal="-10" src="https://placehold.co/600x800/orange/white" alt="">
             </div>
             <div class="col3">
-              <img class="img3 parallax" data-horizontal="-20" src="https://placehold.co/800x600" alt="">
+              <img class="img3 parallax" data-horizontal="20" src="https://placehold.co/600x800/orange/white" alt="">
             </div>
           </div>
         </div>
@@ -121,9 +121,6 @@ import Layout from '../layouts/Layout.astro'
     padding: 140px 0;
     background: cyan;
   }
-  .heroPadding {
-    
-  }
 
   .cslisting {
     padding: 120px 0;
@@ -147,31 +144,47 @@ import Layout from '../layouts/Layout.astro'
   .fancy-grid-wrapper {
     height: 400px;
     overflow: hidden;
+    background-color:aqua;
   }
 
   .grid-fancy {  display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: max-content max-content; 
+    grid-template-rows: 1fr 1fr; 
     gap: 0px 24px;
     grid-auto-flow: row;
     grid-template-areas:
       "col1 col2 col3"
       "col1 col2 col3";
+    // background-color:bisque;
     
 
     .col1 { 
       grid-area: col1;
+      justify-self: center; 
+      align-self: start; 
+      // margin-top: auto;
+      img {
+        margin-top: -24%;
+      }
     }
 
     .col2 { 
       grid-area: col2;
+      justify-self: center; 
+      align-self: end; 
+      
       img {
-        padding-top: 20%;
+        margin-top: 20%;
       }
     }
 
     .col3 { 
-      grid-area: col3; 
+      grid-area: col3;
+      justify-self: center; 
+      align-self: start;
+      img {
+        margin-top: -34%;
+      }
     }
   }
 
